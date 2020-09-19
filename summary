@@ -1,0 +1,161 @@
+# -------------------STRING LITRALS------------------
+# a = 'A string'  # string literal with single quotes
+# b = "A hello string"  # string literal with double quotes
+# print(b == a)  # there is no difference between these strings
+
+
+# print('Single quoted string with " is no problem')
+
+
+# print('Single quoted string containing \' is OK with backslash')
+
+
+# print("Double quoted string with ' is no problem")
+
+# print("Double quoted string containing \" is OK with backslash")
+
+# print('Backslash before "n", as in \n hello world')
+
+# print(r'Prefixed by "r" the \n hello world ') #we could use this for directory like c:/data/user
+
+# print('''This string literal
+# ... has more than one
+# ... line''')
+
+# print("""This string literal
+# ... also has more than one
+# ... line""")
+
+
+##-----------------LIST AND LIST METHODS------------------
+# ones=[1]*100
+# print(ones)
+
+# we could combine any data types together
+# letters=['a','b','c','d']
+# num= ['1','2','3']
+# zeros=[0]*5
+# combine =zeros+letters
+# print(combine)
+
+# # #using list() method to create list
+# random = list(range(1,20))
+# print(random)
+
+# creating character list
+# chars=list("hello world")
+# print(chars)
+
+##-------------ACCESSING ITEMS FROM LIST AND CHANGING THEM-------
+
+list1 = ["a", "b", "c"]
+# print(list1[1])
+# print(list1[-1])
+# list1[0]="A"
+# print(list1)
+
+# #slicing is also possible in list
+# letters=["a","b","c","d","t"]
+# # print(letters[:])
+# # print(letters[:2])
+# print(letters[6:1:-1])
+
+# # -------unpacking list--------
+# num=[1,2,3]
+# first ,second, third=num
+# print(num)
+# print(first)
+
+# num=[1,2,3,4,5,6,7,8,9]
+# first,second,*other=num
+# print(other)
+# print(first)
+
+# num =[1,23,4,5,6,7,8,9,0,4,5,5]
+# first,*other,last=num
+# print(first)
+# print(other)
+# print(last)
+
+# looping over list
+# city=['mumbai','nashik','pune','thane']
+# for c in city:
+#     print(c)
+
+# nowing index of the element
+# city=['mumbai','nashik','pune','thane']
+# for index,value in enumerate(city):
+#     print(index)
+#     print(value)
+
+# add object into list
+name = ["niraj", "yomi", "kundan", "a"]
+# name.append("hari") #add at the end
+# print(name)
+# add at specific position
+# name.insert(2,'karan')
+# print(name )
+
+# remove object from list
+# name.pop() #last element deleted
+# print(name)
+# name.pop(0) #index '0' will be removed
+# print(name)
+# name.remove("a")
+# print(name)
+
+# del statement
+# letter=['a','c','f','d']
+# # del letter[0:3]#can delete single or range of items
+# # print(letter)
+# letter.clear()  #clear the list
+# print(letter)
+
+
+# Events = {'name': 'Christmas', 'name': 'wss', 'Lib_name': 'Hi'}
+# if 'Christmas' in Events.values():
+#     Events.popitem()
+# print(Events)
+#deleting list item having value 56
+
+#     print(index)
+#     print(value)
+# events=[1,2,3,4,56,5]
+# search=56;
+# for index,value in enumerate(events):
+#     if search in events:
+#         print(value)
+#         print(events[index])
+#         del events[index]
+# print(events)
+
+events = [{'name': 'Christmas'}, {'s-bname': 'wss'}, {'name': 'Hi'}]
+searchval = 'Christmas'
+
+for index,item in enumerate(events):
+    if searchval in item.values():
+        print(item)
+        print(index)
+        del events[index]
+print(events)
+
+
+# for i in events:
+#     print(i)
+#     print(type(i))
+#     if key in i.values():
+#         print(i)
+#         print(key+"found")
+#         break;
+         # i.popitem()
+
+# using del + loop
+# to delete dictionary in list with similar dict keys
+# for i in range(len(events)):
+#     if events[i]['name'] == 'Hi':
+#         del events[i]
+#         break
+#del list item from list of dict
+# for i in range(len(events)):
+#     if key in events.values():
+#         del events[i]
